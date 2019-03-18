@@ -47,12 +47,17 @@ class NativeDictionary:
         if self.is_key(key)==True:
             for index in range(len(self.slots)):
                 if self.slots[index]==key:
-                    data.append(self.slots[index])
+                   # data.append(self.slots[index])
                     data.append(self.values[index])
                 index+=1
             return data
         else:
             return None
+
+
+    
+
+
 
 
 
