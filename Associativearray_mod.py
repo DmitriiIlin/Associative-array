@@ -42,13 +42,12 @@ class NativeDictionary:
     def get(self, key):
         # возвращает value для key, 
         # или None если ключ не найден
-        data=[]
         key=str(key)
         if self.is_key(key)==True:
             for index in range(len(self.slots)):
                 if self.slots[index]==key:
                    # data.append(self.slots[index])
-                    data.append(self.values[index])
+                    data=self.values[index]
                 index+=1
             return data
         else:
