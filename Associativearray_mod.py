@@ -29,15 +29,19 @@ class NativeDictionary:
     def put(self, key, value):
         # гарантированно записываем 
         # значение value по ключу key
-        if None in self.slots:
+
+        if None in self.slots and value!=None:
             index=self.hash_fun(key)
             while self.slots[index]!=None:
                 if index<self.size-1:
                     index+=1
                 else:
                     index=0
-        self.slots[index]=str(key)
-        self.values[index]=value
+            self.slots[index]=str(key)
+            self.values[index]=value
+        else: 
+            pass
+         
 
     def get(self, key):
         # возвращает value для key, 
